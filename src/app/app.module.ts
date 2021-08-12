@@ -9,6 +9,13 @@ import { ApplicationComponent } from './application/application.component';
 import { AboutComponent } from './about/about.component';
 import { TestingComponent } from './testing/testing.component';
 import { ChartsModule } from 'ng2-charts';
+import { ChatspieComponent } from './chatspie/chatspie.component';
+import { ChartsradarComponent } from './chartsradar/chartsradar.component';
+import { ChartsbarComponent } from './chartsbar/chartsbar.component';
+import { PercentagePieComponent } from './percentage-pie/percentage-pie.component';
+import { FooterComponent } from './footer/footer.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 
 @NgModule({
   declarations: [
@@ -17,12 +24,18 @@ import { ChartsModule } from 'ng2-charts';
     StudyComponent,
     ApplicationComponent,
     AboutComponent,
-    TestingComponent
+    TestingComponent,
+    ChatspieComponent,
+    ChartsradarComponent,
+    ChartsbarComponent,
+    PercentagePieComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ChartsModule
+    ChartsModule,
+    FontAwesomeModule,
   ],
   exports:[
     ChartsModule
