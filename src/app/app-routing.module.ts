@@ -1,3 +1,8 @@
+import { NaivebayesComponent } from './naivebayes/naivebayes.component';
+import { SvmComponent } from './svm/svm.component';
+import { RandomforestComponent } from './randomforest/randomforest.component';
+import { LstmComponent } from './lstm/lstm.component';
+import { LogisticregressionComponent } from './logisticregression/logisticregression.component';
 import { TestingComponent } from './testing/testing.component';
 import { AboutComponent } from './about/about.component';
 import { ApplicationComponent } from './application/application.component';
@@ -12,7 +17,13 @@ const routes: Routes = [
   {path:"application", component:ApplicationComponent},
   {path:"about", component:AboutComponent},
   {path:"testing", component:TestingComponent},
+  {path:"naivebayes", component:NaivebayesComponent},
+  {path:"svm", component:SvmComponent},
+  {path:"randomforest", component:RandomforestComponent},
+  {path:"lstm", component:LstmComponent},
+  {path:"logisticregression", component:LogisticregressionComponent},
   {path:"**", component:HomeComponent},
+  
 ];
 
 @NgModule({

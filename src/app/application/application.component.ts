@@ -8,8 +8,12 @@ import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 })
 export class ApplicationComponent implements OnInit {
   fapaper = faPaperPlane
+  showresult = false
+  text =""
   constructor() { }
+  send(){
 
+  }
   ngOnInit(): void {
   }
 

@@ -15,7 +15,12 @@ import { ChartsbarComponent } from './chartsbar/chartsbar.component';
 import { PercentagePieComponent } from './percentage-pie/percentage-pie.component';
 import { FooterComponent } from './footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-
+import { FormsModule } from '@angular/forms';
+import { SvmComponent } from './svm/svm.component';
+import { NaivebayesComponent } from './naivebayes/naivebayes.component';
+import { LstmComponent } from './lstm/lstm.component';
+import { LogisticregressionComponent } from './logisticregression/logisticregression.component';
+import { RandomforestComponent } from './randomforest/randomforest.component';
 
 @NgModule({
   declarations: [
@@ -29,11 +34,17 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ChartsradarComponent,
     ChartsbarComponent,
     PercentagePieComponent,
-    FooterComponent
+    FooterComponent,
+    SvmComponent,
+    NaivebayesComponent,
+    LstmComponent,
+    LogisticregressionComponent,
+    RandomforestComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     ChartsModule,
     FontAwesomeModule,
   ],

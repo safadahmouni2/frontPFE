@@ -10,18 +10,24 @@
             <div class="col-md-6 offset-md-3">
                 <div class="card">
                     <div class="card-body">
-                        <form class="form text-center  form-horizontal">
+                        <div class="form text-center  form-horizontal">
                             <label class="mb-3">Try the application</label>
-                           
+
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="enter your text">
-                                <button type="submit" class="btn btn--outlint-light ml-40">
+                                <input type="text" [(ngModel)]="text" class="form-control" placeholder="enter your text">
+                                <button type="submit" class="btn btn--outlint-light ml-40" (Click)="send()">
                                     <fa-icon [icon]="fapaper"></fa-icon>
                                     <!-- <fa name="paper-plane"></fa> -->
                                     <!-- <i class="fa fa-paper-plane" aria-hidden="true"></i> -->
                                 </button>
                             </div>
-                        </form>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="card card-light" *ngIf="showresult">
+                    <div class="card-body">
+                        result : {{text}}
                     </div>
                 </div>
             </div>
