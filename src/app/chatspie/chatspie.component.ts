@@ -1,3 +1,5 @@
+import { ChartspieService } from './chartspie.service';
+import { ComparaisonbarService } from './../comparisationbar/comparaisonbar.service';
 import { Component, OnInit } from '@angular/core';
 import { ChartType, ChartOptions } from 'chart.js';
 import { SingleDataSet, Label, monkeyPatchChartJsLegend, monkeyPatchChartJsTooltip, Color } from 'ng2-charts';
@@ -26,9 +28,8 @@ export class ChatspieComponent implements OnInit {
               }]
           },
   };
-  public pieChartLabelsPerson: Label[] = ['محمد عبو  ','قيس سعيد  ', 'عبير موسي', 'راشد الغنوشي','الصافي سعيد','يوسف الشاهد','هشام المشيشي ','ياسين العياري  ','سيف الدين المخلوف','فيصل التبيني'];
-  public piechartLabelsInfluence:Label[]=['1','2','3','5','6','4','7','8','9','10'];
-  public pieChartData: SingleDataSet = [7,11, 12, 14,6,8,10,11,11,11];
+public piechartLabelsInfluence:Label[]=[];
+  public pieChartData: SingleDataSet = [];
   public pieChartType: ChartType = 'pie';
   public pieChartLegend = true;
   public pieChartPlugins = [];
@@ -41,11 +42,16 @@ export class ChatspieComponent implements OnInit {
     },
     
   ];
-  constructor() {
+  constructor(private ChartspieService: ChartspieService) {
     monkeyPatchChartJsTooltip();
     monkeyPatchChartJsLegend();
   }
   ngOnInit(): void {
+    this.ChartspieService.getvalues().subscribe((data:any)=>{
+      this.piechartLabelsInfluence = data.labels
+      this.pieChartData= data.data
+      console.log(data)
+    })
   }
 
 }

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -21,6 +21,7 @@ import { NaivebayesComponent } from './naivebayes/naivebayes.component';
 import { LstmComponent } from './lstm/lstm.component';
 import { LogisticregressionComponent } from './logisticregression/logisticregression.component';
 import { RandomforestComponent } from './randomforest/randomforest.component';
+import { ComparisationbarComponent } from './comparisationbar/comparisationbar.component';
 
 @NgModule({
   declarations: [
@@ -39,10 +40,12 @@ import { RandomforestComponent } from './randomforest/randomforest.component';
     NaivebayesComponent,
     LstmComponent,
     LogisticregressionComponent,
-    RandomforestComponent
+    RandomforestComponent,
+    ComparisationbarComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     FormsModule,
     ChartsModule,

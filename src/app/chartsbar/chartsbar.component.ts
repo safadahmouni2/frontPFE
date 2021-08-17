@@ -1,7 +1,7 @@
+import { ChartsbarService } from './chartsbar.service';
 import { Component, OnInit } from '@angular/core';
 import { ChartOptions, ChartType, ChartDataSets } from 'chart.js';
 import { Label ,Color} from 'ng2-charts';
-
 
 @Component({
   selector: 'app-chartsbar',
@@ -43,9 +43,16 @@ export class ChartsbarComponent implements OnInit {
     },
   ];
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(private chartsbarService: ChartsbarService) {
+  
   }
+  ngOnInit(): void {
+    this.chartsbarService.getvalues().subscribe((data:any)=>{
+      this.barChartLabels = data.labels
+      this.barChartData[0].data= data.data
+      console.log(data)
+    })
+  }
+
 
 }
