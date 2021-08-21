@@ -11,7 +11,11 @@ export class ApplicationComponent implements OnInit {
   fapaper = faPaperPlane
   showresult = false
   text =""
-  result =""
+  algorithm = ""
+  result ={
+    politician_name:"",
+    influence:""
+  }
   constructor(private applicationService: ApplicationService) {
   
   }
@@ -19,7 +23,8 @@ export class ApplicationComponent implements OnInit {
    
   }
   send(){
-    this.applicationService.getvalues().subscribe((data:any)=>{
+    console.log(this.algorithm)
+    this.applicationService.getvalues(this.text,this.algorithm).subscribe((data:any)=>{
       this.showresult = true
       this.result =data.result
       console.log(data)

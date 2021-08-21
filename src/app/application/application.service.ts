@@ -6,10 +6,12 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ApplicationService {
-  route ="/application"
+  route = "/application"
   constructor(private httpClient: HttpClient) { }
-  getvalues(){
-    return this.httpClient.get(environment.APIURL+this.route);
+  getvalues(textinput: string, algorithm: string) {
+    return this.httpClient.get(environment.APIURL + 
+      this.route + "?textinput=" + textinput + "&algorithm=" +
+       algorithm);
   }
-  
+
 }

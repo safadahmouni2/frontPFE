@@ -12,9 +12,31 @@
                     <div class="card-body">
                         <div class="form text-center  form-horizontal">
                             <label class="mb-3">Try the application</label>
-
+                            
                             <div class="input-group mb-3">
+                            <select placeholder="algorithm" class="form-control" [(ngModel)]="algorithm" value="">
+                                
+                                <option value="nb">
+                                    NB
+                                </option>
+                                <option value="svm">
+                                    SVM
+                                </option>
+                                <option value="rf">
+                                    RF
+                                </option>
+                                <option value="lr">
+                                    LR
+                                </option>
+                                <option value="lstm">
+                                    LSTM
+                                </option>
+                            </select>
+                            </div>
+                            <div class="input-group mb-3">
+            
                                 <input type="text" [(ngModel)]="text" class="form-control" placeholder="enter your text">
+                                
                                 <button type="submit" class="btn btn--outlint-light ml-40" (click)="send()">
                                     <fa-icon [icon]="fapaper"></fa-icon>
                                     <!-- <fa name="paper-plane"></fa> -->
@@ -27,7 +49,8 @@
                 <br>
                 <div class="card card-light" *ngIf="showresult">
                     <div class="card-body">
-                        result : {{result}}
+                        politician : {{result.politician_name}} <br>
+                        influence :  {{result.influence}} 
                         <div class="">
                             <app-chartsradar></app-chartsradar>
                         </div>
