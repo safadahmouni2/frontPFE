@@ -22,6 +22,7 @@ import { LstmComponent } from './lstm/lstm.component';
 import { LogisticregressionComponent } from './logisticregression/logisticregression.component';
 import { RandomforestComponent } from './randomforest/randomforest.component';
 import { ComparisationbarComponent } from './comparisationbar/comparisationbar.component';
+import { BarchartfrequentwordsComponent } from './barchartfrequentwords/barchartfrequentwords.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { ComparisationbarComponent } from './comparisationbar/comparisationbar.c
     LstmComponent,
     LogisticregressionComponent,
     RandomforestComponent,
-    ComparisationbarComponent
+    ComparisationbarComponent,
+    BarchartfrequentwordsComponent
   ],
   imports: [
     BrowserModule,

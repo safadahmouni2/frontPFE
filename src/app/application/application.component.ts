@@ -23,11 +23,9 @@ export class ApplicationComponent implements OnInit {
    
   }
   send(){
-    console.log(this.algorithm)
     this.applicationService.getvalues(this.text,this.algorithm).subscribe((data:any)=>{
       this.showresult = true
       this.result =data.result
-      console.log(data)
     })
   }
 }

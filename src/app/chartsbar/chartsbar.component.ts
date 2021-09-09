@@ -23,17 +23,11 @@ export class ChartsbarComponent implements OnInit {
                 
             },
     };
-  public barChartLabels: Label[] =  ['محمد عبو  ','قيس سعيد  ', 'عبير موسي', 'راشد الغنوشي','الصافي سعيد','يوسف الشاهد','هشام المشيشي '
-  ,'ياسين العياري','سيف الدين المخلوف','فيصل التبيني'];
+  public barChartLabels: Label[] =  [];
   public barChartType: ChartType = 'bar';
   public barChartLegend = true;
   public barChartPlugins = [];
-  public barChartData: ChartDataSets[] = [
-    { data: [342, 518, 564, 662, 313, 355, 461,499,502,506],
-      label:'Posts',
-      
-  }, 
-  ];
+  public barChartData: any[] = [];
   public barChartColors: Color[] = [
     {
      // borderColor: ['', '', '','',''],
@@ -42,6 +36,8 @@ export class ChartsbarComponent implements OnInit {
   
     },
   ];
+  bg:any = ['rgba(249, 125, 0, 1)', 'rgba(102, 7, 159, 1)', 'blue','green',
+  'rgb(238, 130, 238)','rgba(149, 255, 21, 1)','grey','red','rgba(59, 205, 234, 1)','rgba(93, 54, 7, 1)']
 
   constructor(private chartsbarService: ChartsbarService) {
   
@@ -49,8 +45,14 @@ export class ChartsbarComponent implements OnInit {
   ngOnInit(): void {
     this.chartsbarService.getvalues().subscribe((data:any)=>{
       this.barChartLabels = data.labels
-      this.barChartData[0].data= data.data
-      console.log(data)
+      this.barChartData[0].data = data.data
+      this.barChartData[0].label = data.influence[0]
+      for(var i=1;i<data.data.length;i++){
+        this.barChartData.push({
+          label:data.influence[i],
+          backgroundColor:this.bg[i],
+        })
+      }
     })
   }
 

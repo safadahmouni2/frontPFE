@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 })
 export class ChartsbarService {
 
-  route="/data_distribution"
+  route="/data-distribution"
   constructor(private httpClient: HttpClient) { }
   getvalues(){
     return this.httpClient.get(environment.APIURL+this.route);

@@ -1,29 +1,44 @@
-
 <section>
   <div class="container">
     <h2>Introduction</h2>
-    <p>Lorem ipsum dolor sit amet, sit at error moderatius, ferri dolor reformidans ne quo, eos ut consul diceret. Mazim
-      nullam habemus at est, pri vocibus invenire ex. Mei cetero elaboraret ex, vim et autem delenit pericula.
-      Apeirian definiebas pri no, ius in ridens invidunt abhorreant, probatus omittantur te eum. Nam et dicant
-      invenire.</p>
+    <p>In this post, we discuss the idea of a clean ,a visualize and a train of machine learning dataset.
+      This is a common thing to see in large publicly available data sets. The common assumption is that
+      we will develop a ML system using the arabic text coming from Facebook and then evaluate it on test data.</p>
   </div>
 </section>
 <section>
   <div class="container">
-    <h2>Data Visualisation</h2>
-    <p>Data visualization is the representation of data or information in a graph, chart, 
+    <h2>Data Cleaning</h2>
+    <p>Data cleaning is a very crucial step in any machine learning model, but more so for in NLP arabic text.
+      Without the cleaning process, the dataset is often a cluster of words that the computer
+      doesn’t understand.For that reason,we accompany 7 steps to cleaning our data as follow :</p>
+    <h5>Cleaning Arabic Text for Social media (Facebook)</h5>
+
+    <ul>
+      <li>Remove empty rows in the dataset</li>
+      <li>Remove Punctuation</li>
+      <li>Remove Diacritics</li>
+      <li>Remove numbers</li>
+      <li>Remove Stop words</li>
+      <li>Remove Emojis</li>
+      <li> Tokenization</li>
+    </ul>
+  </div>
+  <div class="container">
+    <h2>Data Visualization</h2>
+    <p>Data visualization is the representation of data or information in a graph, chart,
       or other visual format. It helps people understand the significance of data by summarizing
-       and presenting huge amount of data in a simple and easy-to-understand format and helps 
+      and presenting huge amount of data in a simple and easy-to-understand format and helps
       communicate information clearly and effectively.</p>
   </div>
   <div class="container" style="padding:5vh">
     <div class="">
-      <h4>Pie chart Visualisation</h4>
-      <p>A pie chart is data visualization that displays values as slices of a pie, 
-        sized by their percentage of the total.To better understanding our data 
-        we plot two  pie charts. In the output, we can see the distribution of speeches per person  in the first one
+      <h4>Pie chart Visualization</h4>
+      <p>A pie chart is data visualization that displays values as slices of a pie,
+        sized by their percentage of the total.To better understanding our data
+        we plot two pie charts. In the output, we can see the distribution of speeches per person in the first one
         and the distribution of the influence in the dataset for each politician in the second.
-    
+
       </p>
     </div>
     <div class="row">
@@ -44,10 +59,13 @@
       </div>
     </div>
     <div class="">
-      <h4> Bar chart Visualisation</h4>
+      <h4> Bar chart Visualization</h4>
       <p>A bar chart is used when we want to show a distribution of data points
-        or perform a comparison of metric values across different subgroups of our data. 
-       From a bar chart, we can see which groups are highest or most common.here, we plot a bar chart
+        or perform a comparison of metric values across different subgroups of our data.
+        From a bar chart, we can see which groups are highest or most common.
+      </p>
+      <h5> Visualize the distribution of speeches for each person</h5>
+      <p>Here, we plot a bar chart
         to see the distribution of speeches for each person.
       </p>
     </div>
@@ -57,17 +75,50 @@
         <app-chartsbar></app-chartsbar>
       </div>
     </div>
+    <div class="">
+      <h5> Visualize the top 30 frequent words</h5>
+      <p>Frequently, we want to know which words are the most common from a cleaned text corpus
+        after we are looking for some patterns.
+      </p>
+    </div>
+
+    <div class="card mb-3">
+      <div class="card-body">
+        <app-barchartfrequentwords></app-barchartfrequentwords>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <h4>Topic Modeling</h4>
+    <p>Topic modeling is an unsupervised machine learning technique
+      (Unsupervised learning: where data is not structured and don’t have labels)
+      that's capable of scanning a set of documents, detecting word and phrase patterns
+      within them, and automatically clustering word groups and similar expressions that best
+      characterize a set of documents </p>
+      <p>In clustering, the basic idea is to
+         group documents into different groups based on some suitable similarity measure.Therefore, we use topic modeling
+        to propose a political parties using the similarity words shown as below:  </p>
+      <div class="container" class="text-center">
+        <h2>Topics in LDA model</h2>
+      <div class="card-body" > <img src="assets/images/topicmodeling.jpg">
+      </div>
+      </div>
+
   </div>
 </section>
 <section>
   <div class="container">
     <h2>Machine Learning</h2>
-    <p>Machine learning is an important component of the growing field of data science. 
+    <p>Machine learning is an important component of the growing field of data science.
       Through the use of statistical methods, algorithms are trained to make classifications or predictions,
-       uncovering key insights within data mining projects. These insights subsequently
-       drive decision making within applications and businesses, ideally impacting key growth metrics. </p>
+      uncovering key insights within data mining projects.
+      In this section,we developed several algorithms which are Support Vector Machine, Naïve Bayes,
+      Random Forest, Logistic Regression, and also LSTM in Deep learning. </p>
+     
   </div>
-  <div class="container" style="padding:5vh">
+ <div class="container" style="padding:5vh">
     <div class="row">
       <div class="col">
         <div class="card mb-3">
@@ -75,7 +126,8 @@
             <div class="text-center">
 
               <h4>Naive Bayes (NB)</h4>
-              <a class="btn btn-secondary" routerLink="/naivebayes" routerLinkActive="router-link-active" > more infos</a>
+              <a class="btn btn-secondary" routerLink="/naivebayes" routerLinkActive="router-link-active"> more
+                infos</a>
             </div>
           </div>
         </div>
@@ -112,7 +164,7 @@
             <div class="text-center">
 
               <h4>Support Vector Machine (SVM)</h4>
-              <a class="btn btn-secondary" routerLink="/svm" > more infos</a>
+              <a class="btn btn-secondary" routerLink="/svm"> more infos</a>
             </div>
 
           </div>
@@ -134,114 +186,29 @@
   </div>
   <div class="container">
     <h4>Evaluation</h4>
-    <p>An evaluation metric quantifies the performance of a predictive model. 
-      This typically involves training a model on a dataset, using the model to make 
-      predictions on a holdout dataset not used during training, then comparing the predictions 
+    <p>An evaluation metric quantifies the performance of a predictive model.
+      This typically involves training a model on a dataset, using the model to make
+      predictions on a holdout dataset not used during training, then comparing the predictions
       to the expected values in the holdout dataset.</p>
-    <div class="table-responsive">
-      <table class="table table-hover  table-striped">
-        <thead>
-          <tr class="table-dark">
-            <th>Algo</th>
-            <th>Accuracy</th>
-            <th>Error rate</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              NB
-            </td>
-            <td>
-              0
-            </td>
-            <td>
-              0
-            </td>
-          </tr>
-          <tr>
-            <td>
-              SVM
-            </td>
-            <td>
-              0
-            </td>
-            <td>
-              0
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Logictic Regression
-            </td>
-            <td>
-0
-            </td>
-            <td>
-0
-            </td>
-          </tr>
-          <tr>
-            <td>
-              Rondom Forest
-            </td>
-            <td>
-0
-            </td>
-            <td>
-0
-            </td>
-          </tr>
-          <tr>
-            <td>
-              LSTM
-            </td>
-            <td>
-0
-            </td>
-            <td>
-0
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+
+    <h4>Comparation of Accuracy algorithms</h4>
+    <br>
     <div class="card mb-3">
-      <h4>comparation</h4>
       <app-comparisationbar></app-comparisationbar>
-      <p>description comparisation  
-        m ipsum dolor sit amet, sit at error moderatius, ferri dolor reformidans ne quo, eos ut consul diceret. Mazim
-      nullam habemus at est, pri vocib
-      </p>
     </div>
-    <div class="">
-      <h4>Topic Modeling</h4>
-      <p>Topic modeling is an unsupervised machine learning technique 
-        (Unsupervised learning: where data is not structured and don’t have labels) 
-        that's capable of scanning a set of documents, detecting word and phrase patterns 
-        within them, and automatically clustering word groups and similar expressions that best 
-        characterize a set of documents </p>
-
-    </div>
+    <br>
+    <p>The Bar chart above indicates that the LSTM algorithm is the best one which its hight accuracy (0.93)
+       while the accuracy of 
+      the Naive Bayes algorithm is down (0.58) which leads us to choose LSTM to obtain a more 
+      efficient prediction.
+    </p><br>
   
-   </div>
-
-
-
-
-
-
-
-
-
-
+  </div>
 </section>
 <section>
   <div class="container">
     <h2>Conclusion</h2>
-    <p>Lorem ipsum dolor sit amet, sit at error moderatius, ferri dolor reformidans ne quo, eos ut consul diceret. Mazim
-      nullam habemus at est, pri vocibus invenire ex. Mei cetero elaboraret ex, vim et autem delenit pericula.
-      Apeirian definiebas pri no, ius in ridens invidunt abhorreant, probatus omittantur te eum. Nam et dicant
-      invenire.</p>
+    <p>In this article, we’ve defined the different steps followed
+       to create a model that we can more effecient precdict a arabic political speeches from Facebook.</p>
   </div>
 </section>

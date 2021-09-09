@@ -1,9 +1,75 @@
-<section class="naivesection"> 
+<section class="naivesection">
     <div class="container">
         <h2>Naive Bayes Alogrithm</h2>
         <p>
-            Naïve Bayes algorithm is a supervised learning algorithm, which is based on Bayes theorem and used for solving classification problems.
+            Naïve Bayes algorithm is a supervised learning algorithm, which is based on Bayes theorem and used for
+            solving classification problems.
             It is mainly used in text classification that includes a high-dimensional training dataset.
-            Naïve Bayes Classifier is one of the simple and most effective Classification algorithms which helps in building the fast machine learning models that can make quick predictions.  </p>
+            Naïve Bayes Classifier is one of the simple and most effective Classification algorithms which helps in
+            building the fast machine learning models that can make quick predictions. </p>
+    </div>
+    <div class="container">
+        <h4>Naive Bayes Classification using Scikit-learn</h4>
+        <p>Generate a model using naive bayes classifier as follow:</p>
+        <img src="assets/images/mnbdefaultcode.jpg">
+    </div>
+    <br>
+    <div class="container">
+        <p>Accuracy result's:</p>
+        <img src="assets/images/accresult0.58.jpg">
+        <br>
+        <p>Plot confusion matrix of the Naive Bayes model:</p>
+        <img src="assets/images/confmatrixmnbdefault.jpg">
+        <br>
+       <!-- <p>Here the results are not as good as they could be as our choice for the alpha parameter was not the best.
+            In real life applications this parameter is usually can changing for better results.</p> -->
+    </div>
+    <div class="container">
+        <p>To use the training model in our application we need to save it in the disk 
+            then load it on the flask application using the library "joblib" </p>
+        <img src="assets/images/savednbmodel.jpg">
+
+      <!--  <p>Here the results are not as good as they could be as our choice for the alpha parameter was not the best. 
+            In real life applications this parameter is usually can changing for better results.</p>
+    </div>
+    <br>
+    <div class="container">
+        <h4>Naive Bayes Optimization </h4>
+        <p>Global optimization is a challenging problem that involves black box and often non-convex,
+            non-linear, noisy, and computationally expensive objective functions.
+            Therfore, Bayesian Optimization provides a probabilistically principled method
+            for global optimization.</p>
+            <p>In this section, will implement the Naive Bayes
+             algorithm testing the different parameters of each classifier for a more efficient result.
+             Therefore, we plot the confusion matrix to visualise  the evaluation of the accuracy and 
+             the error rate (error rate= 1-accuracy).
+                  </p>
+        <h6>The Multinomial Naive Bayes classifier</h6>
+        <p>The multinomial Naive Bayes classifier is suitable for classification with discrete features
+            (e.g., word counts for text classification). The multinomial distribution normally requires
+            integer feature counts. However, in practice, fractional counts such as tf-idf may also
+            work.</p>
+            <h6>Confusion matrix</h6>
+        <p>Confusion matrix use to evaluate the quality of the output of a classifier on the data set. 
+            The diagonal elements represent the number of points for which the predicted label is equal to 
+            the true label, while off-diagonal elements are those that are mislabeled by the classifier. 
+            The higher the diagonal values of the confusion matrix the better, indicating many correct predictions.</p>
+        <p>First, we will implement The MultinomialBN Classifier with testing its several paramaters,the
+            best when "alpha" =0,1 (By default= 1,0).</p>
+        <img src="assets/images/mnbwithopti.jpg">
+        <p></p>
+        <img src="assets/images/confmatrixmnb.jpg">
+
+        <h6>The Bernoulli Naive Bayes classifier</h6>
+        <p>Like MultinomialNB, this classifier is suitable for discrete data. The difference is that
+             while MultinomialNB works with occurrence counts, BernoulliNB is designed for binary/boolean features.</p>
+      <p>Now, we will implement Naive Bayes classifier for multivariate Bernoulli models with testing its several paramaters,the
+            best way when the parameter "alpha" =0,01 (By default= 1,0).</p>
+        <img src="assets/images/bnbopticode.jpg">
+        <p></p>
+        <img src="assets/images/resultbnb.jpg">
+    </div>
+    <div class="container">-->
+
     </div>
 </section>

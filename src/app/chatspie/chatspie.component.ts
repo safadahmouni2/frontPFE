@@ -50,7 +50,6 @@ public piechartLabelsInfluence:Label[]=[];
     this.ChartspieService.getvalues().subscribe((data:any)=>{
       this.piechartLabelsInfluence = data.labels
       this.pieChartData= data.data
-      console.log(data)
     })
   }
 

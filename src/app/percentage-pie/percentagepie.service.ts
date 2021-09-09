@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 })
 export class PercentagepieService {
 
-  route ="/data-persondist"
+  route ="/person-distribution"
   constructor(private httpClient: HttpClient) { }
   getvalues(){
     return this.httpClient.get(environment.APIURL+this.route);

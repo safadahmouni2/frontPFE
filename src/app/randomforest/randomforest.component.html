@@ -1,8 +1,54 @@
-<section class="randomsection"> 
+<section class="randomsection">
     <div class="container">
         <h2>Random Forest Alogrithm</h2>
         <p>
-            Random forest is a supervised learning algorithm. The "forest" it builds, is an ensemble of decision trees, usually trained with the “bagging” method. The general idea of the bagging method is that a combination of learning models increases the overall result.
+            Random forest is a supervised learning algorithm. The "forest" it builds, is an ensemble of decision trees,
+            usually trained with the “bagging” method. The general idea of the bagging method is that a combination of
+            learning models increases the overall result.
         </p>
     </div>
+    <div class="container">
+        <h4>Random Forest Classification using Scikit-learn</h4>
+        <p>Generate a model using Random Forest algorithm and create RandomForestClassifier
+            by default as follow:
+        </p>
+        <img src="assets/images/rfbydefault.jpg">
+        <br>
+            <p>Plot confusion matrix of the Random Forest model training:</p>
+            <img src="assets/images/confmatrixrf.jpg">
+            <br>
+           <!-- <p>Here the results are not as good as they could be as our choice for the alpha parameter was not the best.
+                In real life applications this parameter is usually can changing for better results.</p> -->
+        </div>
+        <div class="container">
+            <p>To use the training model in our application we need to save it in the disk 
+                then load it on the flask application using the library "joblib" </p>
+            <img src="assets/images/savedrfmodel.jpg">
+
+         <!--<p>Here we want to achieve maximum accuracy . However, there are additional
+            hyperparameters available.Therefore, we will change some of it for better results.</p>
+
+    </div>
+    <div class="container">
+        <h4>Random forest Optimization </h4>
+        <p>Random forest models typically perform well with default hyperparameter values, however,
+            to achieve maximum accuracy, optimization techniques can be worthwhile. There are additional
+            hyperparameters available to tune that can improve model accuracy
+            and computational efficiency; here we touch on four hyperparameters that are commonly optimized.
+        </p>
+
+        <p>We will implement RandomForestClassifier with optimization touching the hyperparameters
+            max_depth ('None' by default),min_samples_split('2' by default),max_features('auto' by default)
+            and random_state('None' by default) and the confusion matrix (defined in the NB page)
+            as bellow then evaluate the resualt: </p>
+
+        <img src="assets/images/rfopt.jpg">
+        <br>
+        <br>
+        <p> To conclude, we found that the optimization gives us a higher accuracy of 0.1 (0.61 -> 0.71).It just got
+            better!
+        </p>-->
+    </div>
+
+
 </section>

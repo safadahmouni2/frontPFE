@@ -29,9 +29,9 @@ export class PercentagePieComponent implements OnInit {
       }]
     },
   };
-  public pieChartLabelsPerson: Label[] = ['محمد عبو  ', 'قيس سعيد  ', 'عبير موسي', 'راشد الغنوشي', 'الصافي سعيد', 'يوسف الشاهد', 'هشام المشيشي ', 'ياسين العياري  ', 'سيف الدين المخلوف', 'فيصل التبيني'];
+  public pieChartLabelsPerson: Label[] = [];
   // piechartLabelsInfluence:Label[]=['1','2','3','5','6','4','7','8','9','10'];
-  public pieChartData: SingleDataSet = [7, 11, 12, 14, 6, 8, 10, 11, 11, 11];
+  public pieChartData: SingleDataSet = [];
   public pieChartType: ChartType = 'pie';
   public pieChartLegend = true;
   public pieChartPlugins = [];
@@ -53,7 +53,6 @@ export class PercentagePieComponent implements OnInit {
     this.PercentagepieService.getvalues().subscribe((resp: any) => {
       this.pieChartLabelsPerson = resp.labels
       this.pieChartData = resp.data
-      console.log(resp)
     })
   }
 

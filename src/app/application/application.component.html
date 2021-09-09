@@ -1,11 +1,11 @@
 <section class="sectionapp">
     <div class="container">
-        <h1>application</h1>
-        <p>Lorem ipsum dolor sit amet, sit at error moderatius, ferri dolor reformidans ne quo, eos ut consul diceret.
-            Mazim
-            nullam habemus at est, pri vocibus invenire ex. Mei cetero elaboraret ex, vim et autem delenit pericula.
-            Apeirian definiebas pri no, ius in ridens invidunt abhorreant, probatus omittantur te eum. Nam et dicant
-            invenire.</p>
+        <h1>Application</h1>
+        <p>
+            There we go! Our applications is up and running. Here, you can predict your Tunisian 
+            politician  with choosing the ML algorithm (NB, SVM, Random Forest, Logistic Regression
+            or LSTM) and giving an arabic political speech from Facebook 
+        </p>
         <div class="row">
             <div class="col-md-6 offset-md-3">
                 <div class="card">
@@ -49,11 +49,9 @@
                 <br>
                 <div class="card card-light" *ngIf="showresult">
                     <div class="card-body">
-                        politician : {{result.politician_name}} <br>
+                        
                         influence :  {{result.influence}} 
-                        <div class="">
-                            <app-chartsradar></app-chartsradar>
-                        </div>
+                    
                     </div>
                 </div>
             </div>

@@ -1,12 +1,102 @@
 <section class="svmsection">
     <div class="container">
         <h2>Support Vector Machine Alogrithm</h2>
-         <p>
+        <p>
             “Support Vector Machine” (SVM) is a supervised machine learning algorithm.
             However, it is mostly used in classification problems. In the SVM algorithm,
             we plot each data item as a point in n-dimensional space (where n is a number of features you have) with the
             value of each feature being the value of a particular coordinate. Then, we perform classification by finding
-            the hyper-plane that differentiates the two classes very well.
+            the hyper-plane that differentiates the classes very well.
+
         </p>
+
+        <div class="container">
+            <h4>SVM Classification using Scikit-learn</h4>
+            <p>Generate a model using SVM algorithm
+                and create support vector classifier as follow:
+            </p>
+            <img src="assets/images/svmcode.jpg">
+
+        </div>
+        <br>
+        <div class="container">
+            <p>Accuracy and error rate results:</p>
+            <img src="assets/images/accuracydefaultsvm.jpg">
+
+            <br>
+            <p>Plot confusion matrix of the SVM model training:</p>
+            <img src="assets/images/matrixconfusionsvm.jpg">
+            <br>
+           <!-- <p>Here the results are not as good as they could be as our choice for the alpha parameter was not the best.
+                In real life applications this parameter is usually can changing for better results.</p> -->
+        </div>
+        <div class="container">
+            <p>To use the training model in our application we need to save it in the disk 
+                then load it on the flask application using the library "joblib" </p>
+            <img src="assets/images/modelsavedsvm.jpg">
+
+            
+            
+           <!-- <p>Here the results are not as good as they could be as our choice for the alpha parameter was not the best.
+                In real life applications this parameter is usually can changing for better results.</p> -->
+        </div>
+        <br>
+        <!--<div class="container">
+            <h4>SVM Optimization </h4>
+            <p>The SVM algorithm is implemented in practice using a kernel.
+                A kernel transforms an input data space into the required form.
+                Here, SVM uses three diffrent kernels :linear kernal, rbf kernel
+                and polynomial kernel.</p>
+            <h6>The Linear Kernal</h6>
+            <p>Linear Kernel is used when the data is Linearly separable, that is, it can be separated using a single
+                Line.
+                It is mostly used when there are a Large number of Features in a particular Data Set.</p>
+            <h6>The RBF kernel</h6>
+            <p>
+                RBF is the default kernel used within the sklearn's SVM classification algorithm.
+                RBF Kernel is popular because of its similarity to K-Nearest Neighborhood Algorithm.
+                It has the advantages of K-NN and overcomes the space complexity problem as RBF Kernel Support Vector
+                Machines just needs to
+                store the support vectors during training and not the entire dataset.
+            </p>
+            <h6>The Polynomial Kernel</h6>
+            <p>
+                In machine learning, the polynomial kernel is a kernel function commonly used with
+                support vector machines (SVMs) and other kernelized models, that represents the similarity
+                of vectors (training samples) in a feature
+                space over polynomials of the original variables, allowing learning of non-linear models.
+            </p>
+
+           <p>We will implement all of them as bellow then evaluate their resualts: </p>
+
+            <img src="assets/images/svmopt.jpg">
+            <br>
+            <br>
+
+            <img src="assets/images/linearandrbfresult.jpg">
+            <br>
+            <br>
+            <p>The result above show that the Linear Kernel is more efficent that the rbf and the default Kernel
+                (Accuracy=0,70 ).
+                <br>
+                While the bellow resluts show the accuracy and the error rate for each degree
+                (we proposed 6 degrees ) in the Polynomial Kernel
+            </p>
+
+            <img src="assets/images/6degeespolyresults.jpg">
+            <br>
+            <br>
+            <p>The degree 1 is the best choice in our case</p>
+
+            <p>Finaly ,we show the results of each values proposed for the parameter regularization C
+                (The Regularization parameter tells the SVM optimization how much we want to avoid misclassifying each
+                training example) of the rbf kernel.
+            </p>
+            <img src="assets/images/rbfresultsregu.jpg">
+            <br>
+            <br>
+            <p> To conclude, we found that the default linear kernel and the polynomial kernel with the degree 1 are the best way in our case. </p>
+        </div>-->
+   
     </div>
 </section>

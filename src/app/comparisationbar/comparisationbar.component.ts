@@ -39,7 +39,6 @@ export class ComparisationbarComponent implements OnInit {
     this.comparaisonbarService.getvalues().subscribe((resp:any)=>{
       this.barChartLabels = resp.labels
       this.barChartData[0].data = resp.data
-      console.log(resp)
     })
   }
 

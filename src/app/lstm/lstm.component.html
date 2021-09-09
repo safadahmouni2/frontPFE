@@ -7,5 +7,52 @@
             machine translation, speech recognition, and more.
             LSTMs are a complex area of deep learning.
         </p>
+        <div class="container">
+            <h4>LSTM using Keras</h4>
+            <p>Generate a model using LSTM algorithm
+                which described with 3 hidden layers to give a more efficient result.
+            </p>
+            <p>Firstly, we define the Hyperparametrs and preprocess the text:
+            </p>
+            <img src="assets/images/definehyperparamlstm.jpg">
+
+        </div>
+        <br>
+        <div class="container">
+            <h4>Create LSTM model </h4>
+
+            <p>Let’s make a sequential model now with the first layer as the
+                word embedding layer.And then applying LSTM layer and, one
+                more dense layer with activation as Relu, and a regularizer
+                to avoid over-fitting again are then added.The output layer
+                has softmax so as to get the probability of the word to be predicted next:</p>
+
+            <img src="assets/images/createlstmmodel.jpg">
+        </div>
+        <br>
+        <div class="container">
+            <h4>Convert categorical data into dummy and split into train and test sets
+            </h4>
+
+            <p>Now,we convert categorical variable (influence in our case )into dummy/indicator variables then, we
+                split the data into train and test sets:</p>
+
+            <img src="assets/images/splitlstm.jpg">
+        </div>
+        <div class="container">
+            <h4>Fit the  model</h4>
+              <p>Here,we fit the model with 200 epochs to train then save the best weights into the disk:</p>
+
+            <img src="assets/images/fitlstmandsaveweightsmodel.jpg">
+        </div>
+        <br>
+        <div class="container">
+            <h4>Save the  model</h4>
+              <p>Lastly,we save the tokenizer model:</p>
+
+            <img src="assets/images/tokenizersaved.jpg">
+            <p>And,we save our Neural Network Model to JSON</p>
+            <img src="assets/images/savejsonmodel.jpg">
+        </div>
     </div>
 </section>
